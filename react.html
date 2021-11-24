@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>React Website</title>
+</head>
+<body>
+    <section id="main" class="w-screen h-screen flex items-center justify-center"></section>
+    <script type="text/babel">
+        function Main() {
+            let person = {
+                firstName: "Sharan",
+                lastName: "AJ",
+                age: 20
+            }
+            return (<div className = "text-center font-serif ">
+                <h1 className = "text-3xl mb-6 text-indigo-500">This is my First React Application using CDN links</h1>
+                <h2 className = "text-4xl text-gray-400">My name is {person.firstName}.{person.lastName} and I am {person.age} years old!</h2>
+            </div>)
+        }
+
+        ReactDOM.render(<Main />,document.getElementById('main'))
+    </script>
+</body>
+</html>
