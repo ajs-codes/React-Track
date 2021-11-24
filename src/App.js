@@ -1,9 +1,14 @@
 import React from "react";
 
+import Header from "./components/Header.jsx";
+import User from "./components/User.jsx"
+
 function App() {
+  let userName = ["Sharan AJ","Ravi kumar K","Sairam S","Karthic Raja LV"];
   return (
     <div className="h-screen w-screen">
-      <h1 className="font-mono text-3xl text-center text-blue-600 font-semibold">{"hello world".toUpperCase()}</h1>
+      <Header title="Welcome To My First React Application" />
+      <User names={userName}/>
     </div>
   );
 }
