@@ -1,17 +1,17 @@
 import React from "react";
-
-import Header from "./components/Header.jsx";
-import User from "./components/User.jsx"
-import Person from "./components/Person.jsx";
+import TodoApp from "./Components/TodoApp.jsx";
+import Homepage from "./Components/Homepage.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
-  let userName = ["Sharan AJ","Ravi kumar K","Sairam S","Karthic Raja LV"];
-  let name = "Sharan"
   return (
     <div className="h-screen w-screen">
-      <Header title="Welcome To My First React Application" />
-      <User names={userName}/>
-      <Person name={name} msg={"Welcome to this react track "+ name}/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />}/>
+          <Route path="/react-todo" element={<TodoApp />}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
