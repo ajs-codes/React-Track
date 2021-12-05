@@ -1,6 +1,6 @@
 import React from "react";
-import TodoApp from "./Components/TodoApp.jsx";
-import Homepage from "./Components/Homepage.jsx";
+import TodoApp from "./components/TodoApp.jsx";
+import Homepage from "./components/Homepage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
