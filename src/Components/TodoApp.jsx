@@ -7,24 +7,26 @@ function TodoApp() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filterTodos, setfilter] = useState([]);
+
   useEffect(() => {
     const getLocalTodos = () => {
       // setting localstorage to empty todo for the very first time user vists website
-      if(localStorage.getItem("todos") === null) {
-        localStorage.setItem("todos",JSON.stringify(todos));
+      if (localStorage.getItem("todos") === null) {
+        localStorage.setItem("todos", JSON.stringify(todos));
       } else {
-      // parsing todo from localstorage when user visits every single time
+        // parsing todo from localstorage when user visits every single time
         const localTodos = JSON.parse(localStorage.getItem("todos"));
         setTodos(localTodos);
       }
-    }
+    };
     getLocalTodos();
-  },[])
+  }, []);
+  
   useEffect(() => {
     const saveTodos = () => {
       // updating todos in localstorage when state changes
-      localStorage.setItem("todos",JSON.stringify(todos));
-    }
+      localStorage.setItem("todos", JSON.stringify(todos));
+    };
     saveTodos();
     const filterfunction = () => {
       switch (status) {
@@ -40,8 +42,7 @@ function TodoApp() {
     };
     filterfunction();
   }, [todos, status]);
-  
-  
+
   return (
     <main className="min-h-screen min-w-screen bg-gradient-to-r from-yellow-300 to-red-400">
       <h1 className="text-center text-6xl text-white font-normal py-10">
