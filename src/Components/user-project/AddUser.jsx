@@ -1,14 +1,16 @@
 import { useState } from "react/cjs/react.development";
+import ErrorModel from "./ErrorModal.jsx";
 import Button from "./Button";
 const AddUser = () => {
   const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
+  const [error, seterror] = useState({toggle: false, title: "", msg: ""});
   const submitHandler = (e) => {
     e.preventDefault();
     if (userName.trim().length === 0 || age.trim().length === 0) {
-      alert("User Name or Age is not entered");
+      seterror({toggle: true, title: "Required Error", msg: "Username or Age is Required"});
     } else if (age < 1) {
-      alert("age should be greater than 0");
+      seterror({toggle: true, title: "Age Error", msg: "Age is Greater than 0"});
     } else {
       setUserName("");
       setAge("");
@@ -20,6 +22,9 @@ const AddUser = () => {
   const ageChange = (e) => {
     setAge(e.target.value);
   };
+  const toggleFalse = () => {
+    seterror({toggle: false, title: "", msg: ""});
+  }
   return (
     <section className="w-screen flex justify-center py-10">
       <form
@@ -60,6 +65,13 @@ const AddUser = () => {
           </Button>
         </div>
       </form>
+      {error.toggle && (
+        <ErrorModel
+          title={error.title}
+          msg={error.msg}
+          toggleFalse={toggleFalse}
+        />
+      )}
     </section>
   );
 };

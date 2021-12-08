@@ -1,4 +1,5 @@
-import AddUser from "./AddUser";
+import AddUser from "./AddUser.jsx";
+
 
 const UserUi = () => {
     return (
