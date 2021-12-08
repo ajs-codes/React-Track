@@ -12,6 +12,9 @@ function Homepage() {
         <Link to="/framer-motion" className="text-blue-600 underline">
           React Animations
         </Link>
+        <Link to="/user-project" className="text-blue-600 underline">
+          User Project
+        </Link>
       </div>
     </main>
   );
