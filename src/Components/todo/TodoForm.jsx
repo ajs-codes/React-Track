@@ -7,7 +7,7 @@ function TodoForm({ todos, setTodos,status, setStatus }) {
   };
   const addTodo = (e) => {
     e.preventDefault();
-    if (task !== "") {
+    if (task.trim().length !== 0) {
       setTodos([...todos, { text: task, isDone: false }]);
       setTask("");
     }
