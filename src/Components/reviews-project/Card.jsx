@@ -1,13 +1,14 @@
+import userData from "./data";
 const Card = ({ id, title, msg, setIndex, index }) => {
   function prevData() {
     if (index === 0) {
-      setIndex(9);
+      setIndex(userData.length - 1);
     } else {
       setIndex((prevIndex) => prevIndex - 1);
     }
   }
   function nextData() {
-    if (index === 9) {
+    if (index === userData.length - 1) {
       setIndex(0);
     } else {
       setIndex((prevIndex) => prevIndex + 1);
