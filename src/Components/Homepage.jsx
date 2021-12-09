@@ -16,6 +16,9 @@ function Homepage() {
           User Project
         </Link>
         <Link to="/reviews-project" className="text-blue-600 underline">
+          Reviews Project
+        </Link>
+        <Link to="/slider-project" className="text-blue-600 underline">
           Slider Project
         </Link>
       </div>
