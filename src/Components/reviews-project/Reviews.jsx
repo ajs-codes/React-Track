@@ -1,9 +1,10 @@
-import userData from './data'
+import { motion } from "framer-motion/dist/framer-motion.cjs";
+import userData from "./data";
 import Card from "./Card";
-import { useState } from 'react/cjs/react.development';
+import { useState } from "react/cjs/react.development";
 const Reviews = () => {
-const [index, setIndex] = useState(0);
-const {id,title, body} = userData[index];
+  const [index, setIndex] = useState(0);
+  const { id, title, body } = userData[index];
   return (
     <main className="bg-blue-200 min-h-screen w-screen font-poppins">
       <header>
@@ -12,7 +13,13 @@ const {id,title, body} = userData[index];
         </h1>
       </header>
       <section className="flex justify-center items-center flex-grow">
-        <Card id={id} title={title} msg={body} setIndex={setIndex} index={index}/>
+        <Card
+          id={id}
+          title={title}
+          msg={body}
+          setIndex={setIndex}
+          index={index}
+        />
       </section>
     </main>
   );

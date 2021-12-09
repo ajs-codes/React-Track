@@ -13,8 +13,11 @@ const Card = ({ id, title, msg, setIndex, index }) => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   }
+
   return (
-    <div className="bg-white p-6 rounded-md shadow-md w-1/5">
+    <div
+      className="bg-white p-6 rounded-md shadow-md w-1/5"
+    >
       <article className="text-blue-600 p-6 flex flex-col gap-2 text-center">
         <h4>{id}</h4>
         <h1 className="text-xl">{"Title : " + title}</h1>

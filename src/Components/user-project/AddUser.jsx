@@ -12,6 +12,7 @@ const AddUser = () => {
     } else if (age < 1) {
       seterror({toggle: true, title: "Age Error", msg: "Age is Greater than 0"});
     } else {
+      alert(`UserName : ${userName} \nAge : ${age}`);
       setUserName("");
       setAge("");
     }
