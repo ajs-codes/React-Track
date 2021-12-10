@@ -10,7 +10,7 @@ import Reviews from "./components/reviews-project/Reviews.jsx";
 import Slider from "./components/slider/slider.js";
 import Useeffect from "./components/Useeffect.jsx";
 import Useeffect2 from "./components/Useeffect2.jsx";
-
+import ContextUi from "./components/context-project/ContextUi.jsx";
 function Routing() {
   return (
         <Routes>
@@ -22,6 +22,7 @@ function Routing() {
           <Route path="/slider-project" element={<Slider/>}/>
           <Route path="/use-effect" element={<Useeffect/>}/>
           <Route path="/use-effect-2" element={<Useeffect2/>}/>
+          <Route path="/context-project" element={<ContextUi/>}/>
         </Routes>
   );
 }

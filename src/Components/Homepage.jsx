@@ -21,6 +21,9 @@ function Homepage() {
         <Link to="/slider-project" className="text-blue-600 underline">
           Slider Project
         </Link>
+        <Link to="/context-project" className="text-blue-600 underline">
+          Context Project
+        </Link>
       </div>
     </main>
   );
