@@ -1,3 +1,5 @@
 ### user dummy data from json placeholder
 
-GET https://jsonplaceholder.typicode.com/posts
+GET https://jsonplaceholder.typicode.com/comments
+
+
