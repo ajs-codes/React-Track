@@ -10,6 +10,8 @@ import Reviews from "./components/reviews-project/Reviews.jsx";
 import Useeffect from "./components/Useeffect.jsx";
 import Useeffect2 from "./components/Useeffect2.jsx";
 import ContextUi from "./components/context-project/ContextUi.jsx";
+import StyledComponents from "./components/StyledComponents.jsx"
+
 function Routing() {
   return (
         <Routes>
@@ -21,6 +23,7 @@ function Routing() {
           <Route path="/use-effect" element={<Useeffect/>}/>
           <Route path="/use-effect-2" element={<Useeffect2/>}/>
           <Route path="/context-project" element={<ContextUi/>}/>
+          <Route path="/styled" element={<StyledComponents/>}/>
         </Routes>
   );
 }

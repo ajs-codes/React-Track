@@ -24,6 +24,9 @@ function Homepage() {
         <Link to="/context-project" className="text-blue-600 underline">
           Context Project
         </Link>
+        <Link to="/styled" className="text-blue-600 underline">
+          Styled components project
+        </Link>
       </div>
     </main>
   );
